@@ -47,5 +47,15 @@ data = [
     ("Anosy", -80, -407)
     ]
 
-region_data = pandas.DataFrame(data)
-region_data.to_csv("region_data.csv")
+# region_data = pandas.DataFrame(data)
+# region_data.to_csv("region_data.csv")
+
+# region_data = pandas.DataFrame(data, columns=["region", "x", "y"])
+# region_data.to_csv("region_data2.csv")
+
+# region_data = pandas.DataFrame.from_records(data).to_csv("region_data3.csv")
+
+# region_data = pandas.DataFrame.DataFrame(data).to_csv("region_data4.csv")
+
+region_data = pandas.DataFrame(data, columns=["region", "x", "y"])
+region_data.to_csv("region_data5.csv", index=False)

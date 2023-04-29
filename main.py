@@ -10,7 +10,7 @@ screen.bgpic("mdg_22-regions.gif")
 
 score = 0
 user_guess_list = []
-regions = pandas.read_csv("region_data.csv")
+regions = pandas.read_csv("region_data5.csv")
 
 print(regions)
 

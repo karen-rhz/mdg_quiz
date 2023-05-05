@@ -8,7 +8,6 @@ screen.bgpic("mdg_22-regions.gif")
 
 score = 0
 user_guess_list = []
-learn_region = []
 regions = pandas.read_csv("region_data5.csv")
 regions_list = regions.region.to_list()
 
@@ -18,9 +17,7 @@ while len(user_guess_list) < 22:
                                          "For multiple words, Don't add '-' in between 2 words."
                                          "Type 'Exit' to quit.").title()
     if user_guess == "Exit":
-        for region in regions_list:
-            if region not in user_guess_list:
-                learn_region.append(region)
+        learn_region = [region for region in regions_list if region not in user_guess_list]
         new_data = pandas.DataFrame(learn_region)
         new_data.to_csv("regions_to_learn.csv")
         print(new_data)
